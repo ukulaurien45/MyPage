@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurien Ukurikiyimfura | IT Audit & Cybersecurity Advisory</title>
+  <meta name="description" content="Laurien Ukurikiyimfura - Senior IT Audit, Cybersecurity, and Technology Risk professional helping organizations strengthen governance, manage risk, and improve resilience." />
+  <style>
+    :root {
+      --navy: #16324f;
+      --blue: #265ea3;
+      --orange: #f67b27;
+      --light: #f5f7fb;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(22, 50, 79, 0.12);
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      padding: 5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      opacity: 0.9;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.4vw, 3.5rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      max-width: 760px;
+      margin: 0 0 1.5rem;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      text-decoration: none;
+      filter: brightness(1.02);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .section {
+      padding: 4rem 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      color: var(--navy);
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: 0 6px 18px rgba(17, 24, 39, 0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      background: #eef4ff;
+      color: var(--blue);
+      border: 1px solid #dbe7ff;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--orange);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 0.3rem;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .timeline-meta {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+      align-items: start;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, var(--navy), #0f2740);
+      color: var(--white);
+      border-radius: 22px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box a {
+      color: #cfe3ff;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .grid-2,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">Laurien Ukurikiyimfura</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">IT Audit • Cybersecurity • Technology Risk</div>
+        <h1>Helping organizations strengthen governance, manage technology risk, and improve digital resilience.</h1>
+        <p>
+          I am Laurien Ukurikiyimfura, a senior IT Audit and Cybersecurity professional with 17+ years of experience across financial institutions, public sector organizations, and regulated environments. I support organizations with risk-based assurance, cybersecurity governance, cloud and data risk reviews, and practical control improvement.
+        </p>
+        <div class="button-row">
+          <a class="btn btn-primary" href="#contact">Request a Conversation</a>
+          <a class="btn btn-secondary" href="https://linkedin.com/in/ukulaurien/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>What I Help With</h3>
+        <ul>
+          <li>IT audit and assurance</li>
+          <li>Cybersecurity governance and control reviews</li>
+          <li>Technology risk and compliance advisory</li>
+          <li>Cloud, data, and emerging technology assurance</li>
+          <li>AI governance and risk oversight</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container two-col">
+      <div>
+        <h2>About</h2>
+        <p class="section-intro">
+          I am a Senior IT Audit professional with over 17 years of experience delivering risk-based assurance, governance, and compliance services within financial institutions, public sector organizations, and regulated environments. My experience includes enterprise and dynamic risk assessment, annual audit planning, integrated IT audits, cybersecurity governance, cloud and emerging technology reviews, and data-driven assurance.
+        </p>
+        <p>
+          I am recognized for effective stakeholder engagement, strong professional judgment, and a pragmatic approach that combines technical depth with business understanding. I work comfortably with senior management, audit committees, and cross-functional leaders to translate complex technology risks into practical actions.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Quick Profile</h3>
+        <p><strong>Location:</strong> Montreal, Quebec, Canada</p>
+        <p><strong>Core Focus:</strong> IT Audit, Cybersecurity, Technology Risk, GRC, AI Governance</p>
+        <p><strong>Industries:</strong> Banking, Public Sector, Regulated Environments, International Assurance</p>
+        <p><strong>Languages:</strong> English, French, Kinyarwanda, Swahili, Spanish</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section section-light">
+    <div class="container">
+      <h2>Consulting Services</h2>
+      <p class="section-intro">
+        I help organizations strengthen governance, assess technology risks, and improve the effectiveness of their control environments through practical, risk-focused advisory and assurance support.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>IT Audit & Assurance</h3>
+          <p>Risk-based audits covering IT general controls, cybersecurity controls, applications, data management, cloud environments, and operational resilience.</p>
+        </div>
+        <div class="card">
+          <h3>Cybersecurity Governance</h3>
+          <p>Independent reviews of governance structures, control frameworks, security practices, and alignment with standards such as ISO 27001 and NIST.</p>
+        </div>
+        <div class="card">
+          <h3>Technology Risk Advisory</h3>
+          <p>Support for identifying, evaluating, and prioritizing technology risks across access management, change management, incident response, third-party risk, and emerging technologies.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud & Data Controls</h3>
+          <p>Assessment of cloud-based infrastructure, data governance, and control design to improve security, reliability, and compliance readiness.</p>
+        </div>
+        <div class="card">
+          <h3>AI Governance & Risk</h3>
+          <p>Support for model governance, data quality, explainability, bias considerations, and control oversight in AI-enabled environments.</p>
+        </div>
+        <div class="card">
+          <h3>Control Framework Enhancement</h3>
+          <p>Improvement of audit programs, risk and control matrices, process documentation, and governance frameworks to increase consistency and maturity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Selected Experience</h2>
+      <p class="section-intro">
+        My background spans banking, public sector institutions, and external assurance across Canada, Rwanda, and the United Arab Emirates.
+      </p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>IT Audit Lead — National Bank of Canada</h3>
+          <div class="timeline-meta">Montreal, Canada | Sep 2024 – Present</div>
+          <p>Leading end-to-end risk-based IT audit engagements in a federally regulated financial institution, including dynamic risk assessments, control testing, stakeholder engagement, and reporting to support assurance and enterprise risk oversight.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Senior Advisor, IT Risk & Compliance — Loto-Québec</h3>
+          <div class="timeline-meta">Montreal, Canada | Feb 2024 – Sep 2024</div>
+          <p>Coordinated internal and external audit activities, evaluated ITGC and automated controls, and strengthened control frameworks aligned with COBIT, ISO 27001, NIST, PCI DSS, and WLA standards.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Cybersecurity Auditor — Tasneef / RINA Business Assurance</h3>
+          <div class="timeline-meta">United Arab Emirates | Sep 2022 – Dec 2023</div>
+          <p>Conducted external ISO 27001 and cybersecurity compliance audits in regulated environments and delivered high-volume, risk-based engagements supporting certification and assurance decisions.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Senior Systems Audit Manager — Bank of Kigali Group</h3>
+          <div class="timeline-meta">Kigali, Rwanda | May 2018 – Sep 2022</div>
+          <p>Led teams performing technology audits across core banking, ERP, cybersecurity, business continuity, and digital transformation programs while building internal audit capability and data-driven audit practices.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Senior Principal IT Auditor — Office of the Auditor General</h3>
+          <div class="timeline-meta">Rwanda | Jul 2013 – Feb 2018</div>
+          <p>Built national IT audit capability from the ground up, developed audit methodology, and led audits of ministries, public institutions, and donor-funded programs to improve public-sector oversight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" class="section section-light">
+    <div class="container grid-2">
+      <div class="card">
+        <h2>Qualifications & Certifications</h2>
+        <div class="pill-list">
+          <span class="pill">CISA</span>
+          <span class="pill">ISO/IEC 42001 Lead Auditor</span>
+          <span class="pill">ISO/IEC 27001 Senior Lead Auditor</span>
+          <span class="pill">ISO/IEC 22301 Lead Auditor</span>
+          <span class="pill">CEH</span>
+          <span class="pill">Digital Risk Management Expert</span>
+          <span class="pill">BSc Computer Science</span>
+        </div>
+        <p class="small" style="margin-top:1rem;">Professional memberships include ISACA and the Institute of Internal Auditors.</p>
+      </div>
+      <div class="card">
+        <h2>Languages</h2>
+        <ul>
+          <li>English — Fluent</li>
+          <li>French — Fluent</li>
+          <li>Kinyarwanda — Native</li>
+          <li>Swahili — Intermediate</li>
+          <li>Spanish — Basic</li>
+        </ul>
+        <h3 style="margin-top:1.4rem;">Frameworks & Tools</h3>
+        <p>COBIT, NIST, ISO 27001, ISO 22301, ISO 42001, IDEA, ACL/Galvanize, SQL, Python.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-box" id="contact">
+        <h2 style="color:#fff; margin-top:0;">Let’s Connect</h2>
+        <p>
+          If your organization is looking for support in IT audit, cybersecurity governance, technology risk, or control framework enhancement, I would be pleased to connect.
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:ukulaurien45@gmail.com">ukulaurien45@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ukulaurien/" target="_blank" rel="noopener noreferrer">linkedin.com/in/ukulaurien</a></p>
+        <p><strong>Location:</strong> Montreal, Quebec, Canada</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>Laurien Ukurikiyimfura</strong> — IT Audit, Cybersecurity & Technology Risk Advisory</p>
+      <p class="small">Built for GitHub Pages. To publish, save this file as <strong>index.html</strong> in your <strong>yourusername.github.io</strong> repository.</p>
+    </div>
+  </footer>
+</body>
+</html>
